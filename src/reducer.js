@@ -45,7 +45,7 @@ export default function reducer(state=initialState, action){
           guesses: [],
           feedback: 'Make your guess!',
           auralStatus: '',
-          correctAnswer: Math.floor(Math.random() * 100) + 1
+          correctAnswer: action.newAnswer
         })
     }
     return state;

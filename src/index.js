@@ -14,7 +14,8 @@ store.dispatch(makeGuess(20));
 
 console.log('after makeGuess', store.getState());
 
-store.dispatch(resetGame());
+// store.dispatch(resetGame());
+store.dispatch({type: 'RESET_GAME', newAnswer: 42})
 
 console.log('after resetGame:', store.getState());
 
