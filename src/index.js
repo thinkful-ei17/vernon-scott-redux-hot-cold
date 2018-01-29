@@ -5,18 +5,18 @@ import './reset.css';
 import './index.css';
 import store from './store';
 import Game from './components/game';
-import {setGuesses, setCurrentGuess} from './action';
+import {makeGuess, resetGame} from './action';
 
 
 console.log('before dispatch', store.getState());
 
-store.dispatch(setGuesses([1, 23, 4]));
+store.dispatch(makeGuess(20));
 
-console.log('after dispatch', store.getState());
+console.log('after makeGuess', store.getState());
 
-store.dispatch(setCurrentGuess(54));
+store.dispatch(resetGame());
 
-console.log('after setCurrentGuess:', store.getState());
+console.log('after resetGame:', store.getState());
 
 ReactDOM.render(
   <Game />,//store={store}/>,

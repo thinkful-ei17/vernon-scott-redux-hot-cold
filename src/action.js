@@ -9,19 +9,15 @@ export const initialState = {
     correctAnswer: Math.round(Math.random() * 100) + 1
   };
 
-export const SET_GUESSES = 'SET_GUESSES';
+export const MAKE_GUESS = 'MAKE_GUESS';
 
-export const setGuesses = (guesses) => ({
-      type: SET_GUESSES,
-      guesses,
-  });
-
-export const CURRENT_GUESS = 'CURRENT_GUESS';
-
-export const setCurrentGuess = (guess) => ({
-    type: CURRENT_GUESS,
+export const makeGuess = (guess) => ({
+    type: MAKE_GUESS,
     guess,
-}) 
+})
 
+export const RESET_GAME = 'RESET_GAME';
 
-
+export const resetGame = () => ({
+    type: RESET_GAME
+})
